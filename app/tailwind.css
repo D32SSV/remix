@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;400&family=Noto+Serif:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-3xl font-serif pb-3;
+  }
+
+  h2 {
+    @apply text-xl italic font-sans pb-3;
+  }
+
+  hr {
+    @apply my-6;
+  }
+
+  input[type="text"] {
+    @apply shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none;
+  }
+
+  button[type="submit"] {
+    @apply bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none;
+  }
+
+  form {
+    @apply bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4;
+  }
+
+  .draggable {
+    width: 100px;
+    height: 30px;
+    margin: 10px;
+    padding: 5px;
+    background-color: lightblue;
+    text-align: center;
+    cursor: move;
+    border: 1px solid #ccc;
+  }
+
+  .droppable {
+    width: 220px;
+    height: 150px;
+    margin: 10px;
+    border: 2px dashed #d52626;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .droppable.over {
+    background-color: lightgreen;
+  }
+
+  .placeholder-div {
+    position: relative;
+    min-height: 50px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+
+  .placeholder-div::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #832020;
+    pointer-events: none;
+  }
+
+  .placeholder-div:empty::before {
+    content: "Drop Question Bar here...";
+  }
+
+  .placeholderOptionsDiv {
+    position: relative;
+    min-height: 50px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+
+  .placeholderOptionsDiv::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #832020;
+    pointer-events: none;
+  }
+
+  .placeholderOptionsDiv:empty::before {
+    content: "Drop Options Bar here...";
+  }
+  .questions-container {
+    margin: 20px;
+  }
+
+  .question-container {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+
+  .options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .option {
+    padding: 10px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .option:hover {
+    background-color: #f0f0f0;
+  }
+
+  .correct {
+    background-color: #4caf50; 
+    color: white;
+  }
+
+  .incorrect {
+    background-color: #f44336; 
+    color: white;
+  }
+
+  .result-message {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+}
