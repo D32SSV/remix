@@ -3,7 +3,7 @@
 In the root folder of the project, create a `.env` file. In this file, you will need to add your connection string. 
 
 ```
-CONNECTION_STRING=mongodb+srv://username:password@cluster0.abcdef.mongodb.net/myFirstDatabase
+CONNECTION_STRING=mongodb+srv://root:root@cluster0.n4um7.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 ```
 
 Run a first build, and then start the development environment.
