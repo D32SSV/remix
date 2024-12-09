@@ -9,7 +9,7 @@ CONNECTION_STRING=mongodb+srv://root:root@cluster0.n4um7.mongodb.net/?retryWrite
 Run a first build, and then start the development environment.
 
 ```
-npm run build
+npm i
 npm run dev
 ```
 
